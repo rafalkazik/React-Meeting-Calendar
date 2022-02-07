@@ -11,7 +11,7 @@ class CalendarForm extends React.Component {
       this.inputTime.value,
     ];
 
-    this.props.formData(firstName, lastName, email, date, time);
+    this.props.postFormData(firstName, lastName, email, date, time);
 
     this.form.reset();
   };

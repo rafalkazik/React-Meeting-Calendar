@@ -4,26 +4,54 @@ import CalendarList from "./CalendarList";
 import data from "../db/data.json";
 
 class Calendar extends React.Component {
+  constructor() {
+    super();
+    this.url = `http://localhost:3005/meetings/`;
+  }
+
   state = { data };
 
   componentDidMount() {
-    console.log(this.state);
+    console.log(`componentDidMount() Calendar`);
   }
 
-  getFormData(firstName, lastName, email, date, time) {
-    console.log("essa: " + firstName, lastName, email, date, time);
+  postFormData = (firstName, lastName, email, date, time) => {
+    const data = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      date: date,
+      time: time,
+    };
 
-    return <h1>as</h1>;
-  }
+    const options = {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    };
+
+    fetch(this.url, options)
+      .then((resp) => {
+        if (resp.ok) {
+          return resp.json();
+        }
+
+        throw new Error("Network error!");
+      })
+      .then((resp) => {
+        console.log(resp);
+      });
+  };
 
   render() {
+    const { data } = this.state;
     return (
       <section>
-        <CalendarList />
         <CalendarForm
-          formData={this.getFormData}
+          postFormData={this.postFormData}
           ref={(el) => (this.refForm = el)}
         />
+        <CalendarList data={data} />
       </section>
     );
   }

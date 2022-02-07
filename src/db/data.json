@@ -9,12 +9,20 @@
       "id": 1
     },
     {
-      "firstName": "Jan",
-      "lastName": "Kowalski",
-      "email": "jan@kowalski.not",
-      "date": "2022-01-01",
-      "time": "10:00",
+      "firstName": "Rafał",
+      "lastName": "Kazik",
+      "email": "przykladowy@mail.com",
+      "date": "2222-22-22",
+      "time": "22:22",
       "id": 2
+    },
+    {
+      "firstName": "Kazik",
+      "lastName": "Kazikowski",
+      "email": "sample@mail.com",
+      "date": "2222-22-22",
+      "time": "11:11",
+      "id": 3
     }
   ]
 }
