@@ -19,7 +19,12 @@ class CalendarList extends React.Component {
     ));
 
   render() {
-    return <ul>{this.taskList()}</ul>;
+    return (
+      <section className="CalendarList__list-section list-section">
+        <h2 className="list-section__heading">Lista spotkań:</h2>
+        <ul className="list-section__list">{this.taskList()}</ul>
+      </section>
+    );
   }
 }
 

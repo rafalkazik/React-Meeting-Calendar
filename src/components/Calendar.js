@@ -46,7 +46,7 @@ class Calendar extends React.Component {
   render() {
     const { data } = this.state;
     return (
-      <section>
+      <section className="Calendar__main">
         <CalendarForm
           postFormData={this.postFormData}
           ref={(el) => (this.refForm = el)}

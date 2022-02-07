@@ -1,4 +1,5 @@
 import React from "react";
+import { validEmail, validDate, validTime } from "./FormValidation";
 
 class CalendarForm extends React.Component {
   handleSubmit = (e) => {
@@ -11,13 +12,34 @@ class CalendarForm extends React.Component {
       this.inputTime.value,
     ];
 
-    this.props.postFormData(firstName, lastName, email, date, time);
+    if (firstName.length < 2) {
+      e.preventDefault();
+      alert("Imię musi posiadać minimum dwa znaki");
+    } else if (lastName.length < 2) {
+      e.preventDefault();
+      alert("Nazwisko musi posiadać minimum dwa znaki");
+    } else if (!validEmail.test(email)) {
+      e.preventDefault();
+      alert("Email musi posiadać minimum dwa znaki");
+    } else if (!validDate.test(date)) {
+      e.preventDefault();
+      alert("Błąd daty!");
+    } else if (!validTime.test(time)) {
+      e.preventDefault();
+      alert("Błąd godziny!");
+    } else {
+      this.props.postFormData(firstName, lastName, email, date, time);
 
-    this.form.reset();
+      this.form.reset();
+    }
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit} ref={(node) => (this.form = node)}>
+      <form
+        onSubmit={this.handleSubmit}
+        ref={(node) => (this.form = node)}
+        className="CalendarList__form"
+      >
         <input
           type="text"
           className="CalendarList__input--firstName"
