@@ -43,6 +43,28 @@ class Calendar extends React.Component {
       });
   };
 
+  deleteFormData = (e) => {
+    const targetTaskElementID = e.target.parentElement.getAttribute("data-id");
+
+    console.log(targetTaskElementID);
+
+    const options = {
+      method: "DELETE",
+    };
+
+    fetch(`${this.url}${targetTaskElementID}`, options)
+      .then((resp) => {
+        if (resp.ok) {
+          return resp.json();
+        }
+
+        throw new Error("Network error!");
+      })
+      .then((resp) => {
+        console.log(resp);
+      });
+  };
+
   render() {
     const { data } = this.state;
     return (
@@ -51,7 +73,7 @@ class Calendar extends React.Component {
           postFormData={this.postFormData}
           ref={(el) => (this.refForm = el)}
         />
-        <CalendarList data={data} />
+        <CalendarList data={data} deleteFormData={this.deleteFormData} />
       </section>
     );
   }
