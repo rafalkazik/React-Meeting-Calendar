@@ -1,5 +1,6 @@
 import React from "react";
 import { validEmail, validDate, validTime } from "./FormValidation";
+import "../style/CalendarForm.css";
 
 class CalendarForm extends React.Component {
   state = {
@@ -119,54 +120,58 @@ class CalendarForm extends React.Component {
   };
   render() {
     const errorsList = this.state.errors.map((err, index) => {
-      return <li key={index}>{err}</li>;
+      return (
+        <li key={index} className="CalendarForm__list-item">
+          {err}
+        </li>
+      );
     });
 
     return (
-      <React.Fragment>
-        <ul>{errorsList}</ul>
+      <section className="CalendarForm">
+        <ul className="CalendarForm__list">{errorsList}</ul>
         <form
           onSubmit={(e) => this.handleSubmit(e)}
           ref={(node) => (this.form = node)}
-          className="CalendarList__form"
+          className="CalendarForm__form"
         >
           <input
             type="text"
-            className="CalendarList__input--firstName"
+            className="CalendarForm__input--firstName CalendarForm__input"
             ref={(node) => (this.inputFirstName = node)}
             placeholder="Imię"
           />
           <input
             type="text"
-            className="CalendarList__input--lastName"
+            className="CalendarForm__input--lastName CalendarForm__input"
             ref={(node) => (this.inputLastName = node)}
             placeholder="Nazwisko"
           />
           <input
             type="text"
-            className="CalendarList__input--email"
+            className="CalendarForm__input--email CalendarForm__input"
             ref={(node) => (this.inputEmail = node)}
             placeholder="twój@email.com"
           />
           <input
             type="text"
-            className="CalendarList__input--date"
+            className="CalendarForm__input--date CalendarForm__input"
             ref={(node) => (this.inputDate = node)}
-            placeholder="RRRR-MM-DD"
+            placeholder="Data [RRRR-MM-DD]"
           />
           <input
             type="text"
-            className="CalendarList__input--time"
+            className="CalendarForm__input--time CalendarForm__input"
             ref={(node) => (this.inputTime = node)}
-            placeholder="GG:MM"
+            placeholder="Godzina [GG:MM]"
           />
           <input
             type="submit"
-            className="CalendarList__input--submit"
+            className="CalendarForm__input--submit"
             value="Dodaj"
           />
         </form>
-      </React.Fragment>
+      </section>
     );
   }
 }

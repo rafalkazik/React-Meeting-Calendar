@@ -1,0 +1,36 @@
+.CalendarHeader__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+
+.header__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 3.8rem 0 1rem 0;
+}
+
+.header__title--span {
+  color: var(--orangeColor);
+  animation: 3s 1 normal slidein;
+}
+
+.header__subtitle {
+  font-size: 1.6rem;
+  margin: 0rem 0 3rem 0;
+  font-weight: 500;
+  color: var(--grayColor);
+}
+
+@keyframes slidein {
+  0% {
+    color: var(--darkBlueColor);
+  }
+  33% {
+    color: var(--darkBlueColor);
+  }
+  100% {
+    color: var(--orangeColor);
+  }
+}

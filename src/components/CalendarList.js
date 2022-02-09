@@ -1,4 +1,5 @@
 import React from "react";
+import "../style/CalendarList.css";
 
 class CalendarList extends React.Component {
   componentDidMount() {
@@ -16,12 +17,20 @@ class CalendarList extends React.Component {
         data-id={i.id}
         className="CalendarList__list-item list-item"
       >
-        <p className="list-item__firstName">Imię: {i.firstName} </p>
-        <p className="list-item__lastName">Nazwisko: {i.lastName} </p>
-        <p className="list-item__firstName">E-mail: {i.email} </p>
-        <p className="list-item__firstName">Data: {i.date} </p>
-        <p className="list-item__firstName">Godzina: {i.time} </p>
-        <button onClick={this.deleteTask}>Zakończ</button>
+        <p className="list-item__meetingWith">Spotkanie z: </p>
+        <p className="list-item__fullName">
+          {i.firstName} {i.lastName}{" "}
+        </p>
+        <p className="list-item__email">{i.email} </p>
+        <p className="list-item__date">
+          Data: <span className="list-item__date-number">{i.date}</span>{" "}
+        </p>
+        <p className="list-item__time">
+          Godzina: <span className="list-item__time-number">{i.time}</span>{" "}
+        </p>
+        <button onClick={this.deleteTask} className="list-item__btn">
+          Zakończ
+        </button>
       </li>
     ));
 

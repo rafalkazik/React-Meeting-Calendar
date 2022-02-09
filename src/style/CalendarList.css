@@ -1,0 +1,73 @@
+.CalendarList__list-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+
+.list-section__heading {
+  font-size: 2rem;
+  margin: 1rem 0 3rem 0;
+}
+
+.list-section__list {
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+.CalendarList__list-item {
+  /* background-color: blanchedalmond; */
+  width: 80vw;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-top: 3px solid var(--darkBlueColor);
+  transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.CalendarList__list-item:hover {
+  border-top: 7px solid var(--orangeColor);
+}
+
+/* .list-item__meetingWith{
+
+} */
+
+.list-item__fullName {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.list-item__email {
+  color: var(--darkGreyBlueColor);
+  margin: 0.5rem 0;
+}
+
+.list-item__date,
+.list-item__time {
+  margin: 0.5rem 0;
+}
+
+.list-item__date-number,
+.list-item__time-number {
+  font-weight: 600;
+}
+
+.list-item__btn {
+  width: 100%;
+  -webkit-appearance: none;
+  border: none;
+  background-color: var(--darkBlueColor);
+  color: var(--mainGrayColor);
+  font-size: 1.4rem;
+  height: 4rem;
+  border-radius: 7px;
+  margin: 1.5rem 0 2.5rem 0;
+  transition: 0.1s linear;
+}
+
+.list-item__btn:hover {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: var(--orangeColor);
+  color: var(--darkBlueColor);
+}

@@ -1,0 +1,62 @@
+.CalendarForm {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.CalendarForm__list {
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: var(--errorColor);
+  margin: 0.5rem 0;
+}
+
+.CalendarForm__list-item {
+  margin: 0.5rem 0;
+}
+
+.CalendarForm__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.CalendarForm__input {
+  margin: 0.5rem 0;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--darkBlueColor);
+  color: var(--darkBlueColor);
+  font-size: 1.4rem;
+}
+
+.CalendarForm__input::placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+.CalendarForm__input:focus {
+  border-bottom: 1px solid var(--orangeColor);
+  outline: none;
+  font-weight: 600;
+}
+
+.CalendarForm__input--submit {
+  -webkit-appearance: none;
+  border: none;
+  background-color: var(--darkBlueColor);
+  color: var(--mainGrayColor);
+  font-size: 1.4rem;
+  height: 4rem;
+  border-radius: 7px;
+  margin: 1.5rem 0 2.5rem 0;
+  transition: 0.1s linear;
+}
+
+.CalendarForm__input--submit:hover {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: var(--orangeColor);
+  color: var(--darkBlueColor);
+}
