@@ -9,20 +9,28 @@
       "id": 1
     },
     {
-      "firstName": "Kazik",
-      "lastName": "Kazikowski",
-      "email": "sample@mail.com",
-      "date": "2222-22-22",
-      "time": "11:11",
-      "id": 3
-    },
-    {
       "firstName": "Jan",
       "lastName": "Nowak",
       "email": "janek@o2.pl",
       "date": "2222-22-22",
       "time": "12:12",
       "id": 4
+    },
+    {
+      "firstName": "Joanna",
+      "lastName": "Kowalska",
+      "email": "jkowalska@wp.pl",
+      "date": "2022-12-12",
+      "time": "15:00",
+      "id": 5
+    },
+    {
+      "firstName": "Andrzej",
+      "lastName": "Strzelba",
+      "email": "astrzelba@gmail.com",
+      "date": "2023-10-10",
+      "time": "13:00",
+      "id": 6
     }
   ]
 }

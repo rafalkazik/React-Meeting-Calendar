@@ -1,6 +1,7 @@
 import React from "react";
 import CalendarForm from "./CalendarForm";
 import CalendarList from "./CalendarList";
+import CalendarHeader from "./CalendarHeader";
 import data from "../db/data.json";
 
 class Calendar extends React.Component {
@@ -69,6 +70,7 @@ class Calendar extends React.Component {
     const { data } = this.state;
     return (
       <section className="Calendar__main">
+        <CalendarHeader />
         <CalendarForm
           postFormData={this.postFormData}
           ref={(el) => (this.refForm = el)}
