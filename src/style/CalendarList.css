@@ -85,9 +85,10 @@
   .CalendarList__list-item {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 280px;
     margin: 0 0.6rem;
-    height: 100%;
+    min-height: 250px;
   }
 
   .list-item__btn {
@@ -105,5 +106,13 @@
     width: 100%;
     max-width: 300px;
     margin: 0 1rem;
+  }
+
+  .list-item__email,
+  .list-item__date,
+  .list-item__time,
+  .list-item__date-number,
+  .list-item__time-number {
+    font-size: 1.6rem;
   }
 }

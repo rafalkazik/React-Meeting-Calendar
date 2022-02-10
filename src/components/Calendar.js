@@ -3,6 +3,7 @@ import "../style/Calendar.css";
 import CalendarForm from "./CalendarForm";
 import CalendarList from "./CalendarList";
 import CalendarHeader from "./CalendarHeader";
+import { postData, deleteData } from "./CalendarProvider";
 import data from "../db/data.json";
 
 class Calendar extends React.Component {
@@ -26,45 +27,15 @@ class Calendar extends React.Component {
       time: time,
     };
 
-    const options = {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    };
-
-    fetch(this.url, options)
-      .then((resp) => {
-        if (resp.ok) {
-          return resp.json();
-        }
-
-        throw new Error("Network error!");
-      })
-      .then((resp) => {
-        console.log(resp);
-      });
+    postData(data).then((resp) => {
+      console.log(resp);
+    });
   };
 
   deleteFormData = (e) => {
     const targetTaskElementID = e.target.parentElement.getAttribute("data-id");
 
-    console.log(targetTaskElementID);
-
-    const options = {
-      method: "DELETE",
-    };
-
-    fetch(`${this.url}${targetTaskElementID}`, options)
-      .then((resp) => {
-        if (resp.ok) {
-          return resp.json();
-        }
-
-        throw new Error("Network error!");
-      })
-      .then((resp) => {
-        console.log(resp);
-      });
+    deleteData(targetTaskElementID);
   };
 
   render() {
