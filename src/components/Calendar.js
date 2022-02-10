@@ -7,11 +7,6 @@ import { postData, deleteData } from "./CalendarProvider";
 import data from "../db/data.json";
 
 class Calendar extends React.Component {
-  constructor() {
-    super();
-    this.url = `http://localhost:3005/meetings/`;
-  }
-
   state = { data };
 
   componentDidMount() {

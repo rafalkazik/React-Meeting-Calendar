@@ -9,14 +9,6 @@
       "id": 5
     },
     {
-      "firstName": "Andrzej",
-      "lastName": "Strzelba",
-      "email": "astrzelba@gmail.com",
-      "date": "2023-10-10",
-      "time": "13:00",
-      "id": 6
-    },
-    {
       "firstName": "Kapitan",
       "lastName": "Bomba",
       "email": "bomba@gmail.com",
@@ -55,6 +47,14 @@
       "date": "2022-08-31",
       "time": "15:00",
       "id": 12
+    },
+    {
+      "firstName": "Łukasz",
+      "lastName": "Czegoszukasz",
+      "email": "luki@look.com",
+      "date": "2024-12-12",
+      "time": "16:00",
+      "id": 13
     }
   ]
 }
