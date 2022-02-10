@@ -13,7 +13,7 @@
 
 .header__title--span {
   color: var(--orangeColor);
-  animation: 3s 1 normal slidein;
+  animation: 3s 1 normal colorIn;
 }
 
 .header__subtitle {
@@ -23,7 +23,7 @@
   color: var(--grayColor);
 }
 
-@keyframes slidein {
+@keyframes colorIn {
   0% {
     color: var(--darkBlueColor);
   }
@@ -32,5 +32,25 @@
   }
   100% {
     color: var(--orangeColor);
+  }
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 3.5rem;
+    margin: 4rem 0 1rem 0;
+  }
+  .header__subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__title {
+    font-size: 4.5rem;
+    margin: 5rem 0 1rem 0;
+  }
+  .header__subtitle {
+    font-size: 1.8rem;
   }
 }

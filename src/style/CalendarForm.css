@@ -2,6 +2,38 @@
   display: flex;
   flex-direction: column;
   width: 80vw;
+  max-width: 600px;
+}
+
+.CalendarForm__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CalendarForm__header-top {
+  text-align: center;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.CalendarForm__header-arrow {
+  animation: 2s infinite normal slidein;
+  color: var(--orangeColor);
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .CalendarForm__list {
@@ -59,4 +91,10 @@
   font-weight: 600;
   background-color: var(--orangeColor);
   color: var(--darkBlueColor);
+}
+
+@media (min-width: 768px) {
+  .CalendarForm__header-top {
+    font-size: 1.8rem;
+  }
 }

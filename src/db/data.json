@@ -1,14 +1,6 @@
 {
   "meetings": [
     {
-      "firstName": "Jan",
-      "lastName": "Nowak",
-      "email": "janek@o2.pl",
-      "date": "2222-22-22",
-      "time": "12:12",
-      "id": 4
-    },
-    {
       "firstName": "Joanna",
       "lastName": "Kowalska",
       "email": "jkowalska@wp.pl",
@@ -39,6 +31,22 @@
       "date": "2022-12-30",
       "time": "12:30",
       "id": 8
+    },
+    {
+      "firstName": "Kazik",
+      "lastName": "Rafał",
+      "email": "rafa@kazik.com",
+      "date": "2022-03-12",
+      "time": "15:00",
+      "id": 9
+    },
+    {
+      "firstName": "Tomasz",
+      "lastName": "Kowalski",
+      "email": "kowal@tomasino.com",
+      "date": "2023-01-02",
+      "time": "14:00",
+      "id": 10
     }
   ]
 }

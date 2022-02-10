@@ -129,6 +129,12 @@ class CalendarForm extends React.Component {
 
     return (
       <section className="CalendarForm">
+        <header className="CalendarForm__header">
+          <h2 className="CalendarForm__header-top">
+            Z kim i kiedy chcesz się spotkać?
+          </h2>
+          <div className="CalendarForm__header-arrow">V</div>
+        </header>
         <ul className="CalendarForm__list">{errorsList}</ul>
         <form
           onSubmit={(e) => this.handleSubmit(e)}

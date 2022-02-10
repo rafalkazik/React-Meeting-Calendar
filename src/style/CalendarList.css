@@ -16,21 +16,16 @@
 }
 
 .CalendarList__list-item {
-  /* background-color: blanchedalmond; */
   width: 80vw;
   margin-bottom: 2rem;
   padding: 1rem;
-  border-top: 3px solid var(--darkBlueColor);
+  box-shadow: 0 -3px 0 var(--darkBlueColor);
   transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .CalendarList__list-item:hover {
-  border-top: 7px solid var(--orangeColor);
+  box-shadow: 0 -7px 0 var(--orangeColor);
 }
-
-/* .list-item__meetingWith{
-
-} */
 
 .list-item__fullName {
   font-size: 2.5rem;
@@ -70,4 +65,45 @@
   font-weight: 600;
   background-color: var(--orangeColor);
   color: var(--darkBlueColor);
+}
+
+@media (min-width: 768px) {
+  .list-section__heading {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+  }
+
+  .list-section__list {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .CalendarList__list-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    margin: 0 0.6rem;
+    height: 100%;
+  }
+
+  .list-item__btn {
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .list-section__list {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .CalendarList__list-item {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 1rem;
+  }
 }
