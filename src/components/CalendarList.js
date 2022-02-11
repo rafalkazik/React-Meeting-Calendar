@@ -6,8 +6,8 @@ class CalendarList extends React.Component {
     console.log(this.props);
   }
 
-  deleteTask = (e) => {
-    this.props.deleteFormData(e);
+  deleteTask = (id) => {
+    this.props.deleteFormData(id);
   };
 
   taskList = () =>
@@ -28,7 +28,10 @@ class CalendarList extends React.Component {
         <p className="list-item__time">
           Godzina: <span className="list-item__time-number">{i.time}</span>{" "}
         </p>
-        <button onClick={this.deleteTask} className="list-item__btn">
+        <button
+          onClick={() => this.deleteTask(i.id)}
+          className="list-item__btn"
+        >
           Zakończ
         </button>
       </li>

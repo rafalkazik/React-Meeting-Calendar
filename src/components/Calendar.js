@@ -27,10 +27,8 @@ class Calendar extends React.Component {
     });
   };
 
-  deleteFormData = (e) => {
-    const targetTaskElementID = e.target.parentElement.getAttribute("data-id");
-
-    deleteData(targetTaskElementID);
+  deleteFormData = (id) => {
+    deleteData(id);
   };
 
   render() {
