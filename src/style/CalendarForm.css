@@ -19,7 +19,20 @@
 
 .CalendarForm__header-arrow {
   animation: 2s infinite normal slidein;
+  opacity: 1;
   color: var(--orangeColor);
+  position: relative;
+}
+
+.CalendarForm__header-arrow::after {
+  content: "v";
+  position: absolute;
+  font-size: 1.1rem;
+  top: -90%;
+  left: -4%;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 50%;
 }
 
 @keyframes slidein {

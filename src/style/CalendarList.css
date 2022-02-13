@@ -27,6 +27,10 @@
   box-shadow: 0 -7px 0 var(--orangeColor);
 }
 
+.CalendarList__list-item:hover .list-item__fullName {
+  color: var(--orangeColor);
+}
+
 .list-item__fullName {
   font-size: 2.5rem;
   font-weight: 700;
