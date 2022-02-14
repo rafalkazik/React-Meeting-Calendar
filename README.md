@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# React Meeting Calendar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :technologist: Technologies and metodologies
 
-## Available Scripts
+Technologies and metodologies used in this project:
 
-In the project directory, you can run:
+**React / CSS / BEM / RWD /
+Fetch / JSON Server**
 
-### `npm start`
+<!-- #### :clapper: Check live version: **[LIVE](https://rafalkazik.github.io/github-repo-search/)** -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## :gear: Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project uses [node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/). To run the app on your device you should install all dependencies. Then create a localhost port and run your web explorer.
 
-### `npm test`
+Let's start with installing all dependencies. Move to the app main workspace and run:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm i
 
-### `npm run build`
+To create a localhost port you should type:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Our repositories search engine is ready at port 3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    http://localhost:3000/
 
-### `npm run eject`
+You need to run our JSON server also:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    json-server --watch ./src/db/data.json --port 3005
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :microscope: How it works?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### :point_right: Add your meeting
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Enter the first name, last name, email address of the person you are planning the meeting with and also the date and time of the meeting.
 
-## Learn More
+![firstLook](./public/1.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### :exclamation: Form validation :exclamation:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To submit the form, your data should have the correct format:
 
-### Code Splitting
+- first name and last name should contain at least two characters;
+- the e-mail address should be in the following format: **name@email.com**;
+- the date should be in the format: **YYYY-MM-DD**
+- the time should be entered in the format: **HH: MM**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![formValidation](./public/3.png)
 
-### Analyzing the Bundle Size
+### :x: End the meeting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+After the meeting or if your plans have changed, end the meeting by clicking the button below the meeting.
 
-### Making a Progressive Web App
+![meetings](./public/2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## :mailbox: Feel free to contact me
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can find me on **[LINKEDIN](https://www.linkedin.com/in/rafa%C5%82-kazik-924b8710a/)**
